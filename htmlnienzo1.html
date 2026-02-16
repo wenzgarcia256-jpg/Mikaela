@@ -1,0 +1,185 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>For You 💛</title>
+        <link rel="stylesheet" href="css/cssnienzo1.css">
+    </head>
+    <body>
+    <div class="pixel-decor">
+        <!-- Hearts -->
+        <img src="images/pixelbutterfly.png" class="heart h1">
+        <img src="images/pixelbutterfly.png" class="heart h2">
+        <img src="images/imagepixelbutterfly.png" class="heart h3">
+        <img src="images/pixelbutterfly.png" class="heart h4">
+
+        
+   </div>
+
+        <!-- Intro Screen -->
+        <div class="intro" id="introScreen">
+            <h1>yayy you got it, Mikaela!</h1>
+            <h2>Para sa'yo 'to</h2>
+        </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+
+        <div class="top-buttons">
+            <button onclick="showSection('letter')">Letter 4 U</button>
+            <button onclick="showSection('music')">Musics that reminded me of you</button>
+            <button onclick="showSection('reminders')">Reminders para sa iyakin na 'to</button>
+            <button onclick="showSection('gallery')">Flowers</button>
+        </div>
+
+        <!-- Sliding Panel -->
+        <div class="content-panel" id="contentPanel">
+            
+            <div class="section" id="letter">
+                
+                <p>
+                    My Dearest, Mikaela,
+                    <br>
+                    <br>    
+                    
+                    <p style="margin-left: 25px;">
+                            ‎ ‎ ‎ ‎ ‎ Remember the morning we first talked? Well, today marks two years since that day. Hindi ko makakalimutan unang chat ko no'n "Aga ah" HAHAHAHAHAH
+                            I never imagined that our conversation would go so far. So much has happened, and I’m truly grateful that you’re still here, Mikaela. I’ve always adored your pretty eyes, and everything about you. 
+                            Pati 'yang crybaby self mo mwehehehe cute🐧 I hope you know that I'll always be here, Mikaela. 'Di ako mawawala sa tabi mo. Iyakin pa naman ikaw :pp
+                            I pray to god that you achieve all of those dreams and goals you've been working hard for. I pray rin for you and your fam's health. I hope panatilihin ka and your fam na healthy and malayo sa sickness. 
+                            Remember, Mikaela, I'll always be beside you, clapping proudly for all your achievements knowing you did your best in all of them. I'm proud of you, Mikaela🤍 Btw, whenever I hear the song "Ang Balikat at Baywang", ikaw naalala ko.
+                            I hope one day mapakinggan ko 'yung song na 'yon with you, Mikaela. 2035. Another thing, white really suits you well. I saw your white dress na suot mo and sobrang ganda mo. And you should smile more oftenn, you're so pretty with your smile on :) 
+                            <br> 
+                            <br>
+                            <br>
+                            Your Dearest, Wenz.
+                        </p>
+                </p>
+                
+            </div>
+
+            <div class="section" id="music">
+        <h3>Music 🎵</h3>
+        <p>These songs will always remind me of you, Mikaela.</p>
+
+        <div class="music-list">
+
+            <!-- SONG 1 -->
+            <div class="song" onclick="playSong('song1')">
+                <img src="images/paramorecover.jpg" class="cover">
+                <div class="song-info">
+                    <h4>The Only Exception</h4>
+                    <p>Paramore</p>
+                </div>
+                <audio id="song1" src="song1.mp3"></audio>
+            </div>
+
+            <!-- SONG 2 -->
+            <div class="song" onclick="playSong('song2')">
+                <img src="images/freudian.jpg" class="cover">
+                <div class="song-info">
+                    <h4>Get you</h4>
+                    <p>Daniel Caesar</p>
+                </div>
+                <audio id="song2" src="song2.mp3"></audio>
+            </div>
+    <!-- SONG 3 -->
+            <div class="song" onclick="playSong('song2')">
+                <img src="images/panaginip.jpg" class="cover">
+                <div class="song-info">
+                    <h4>Panaginip</h4>
+                    <p>Iluna</p>
+                </div>
+                <audio id="song2" src="song2.mp3"></audio>
+            </div>
+    <!-- SONG 3 -->
+            <div class="song" onclick="playSong('song2')">
+                <img src="images/balikat.jpg" class="cover">
+                <div class="song-info">
+                    <h4>Ang Balikat at Baywang</h4>
+                    <p>Ian Quiruz</p>
+                </div>
+                <audio id="song2" src="song2.mp3"></audio>
+            </div>
+            <!-- Add more songs like this -->
+
+        </div>
+    </div>
+
+            <div class="section" id="reminders">
+                <h3>Reminders 🌼</h3>
+                <br>
+                <ul>
+                    <li>You're enough, Mikaela. 'Wag mo isipin na hindi ka sapat okay? sa mata't paningin ko, mananatiling sobra ka pa sa sapat🤍</li>
+                    <br>
+                    <li>Always drink enough water, okay? 'wag puro coke ha. Okay lang mag coke ka, just keep it balanced, okay?🤍</li>
+                    <br>
+                    <li>'Pag may nangaaway sa'yo, sumbong mo sa'ken ha. Nag-iisang kakampi mo 'ko 🤍 kahit inaaway mo 'ko (tita oh :pp)</li>
+                    <br>
+                    <li>I'll always be here, Mikaela. 🤍</li>
+                </ul>
+            </div>
+
+            <div class="section" id="gallery">
+                <h3>FLOWERS FOR YOU🌸</h3>
+                <div class="gallery-grid">
+                    <img src="images/gerberas.jpg">
+                    <img src="images/tulip.jpg">
+                    <img src="images/pink.jpg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    
+        setTimeout(() => {
+            document.getElementById("introScreen").classList.add("fade-out");
+            setTimeout(() => {
+                document.getElementById("introScreen").style.display = "none";
+                document.getElementById("mainContent").style.display = "block";
+                document.getElementById("mainContent").classList.add("fade-in");
+            }, 1000);
+        }, 3000);
+    </script>
+
+    </body>
+    </html>
+
+    <script>
+    function showSection(sectionId) {
+
+        const panel = document.getElementById("contentPanel");
+        const sections = document.querySelectorAll(".section");
+
+        // Hide all sections
+        sections.forEach(section => {
+            section.style.display = "none";
+        });
+
+        // Show panel
+        panel.classList.add("active");
+
+        // Show selected section
+        document.getElementById(sectionId).style.display = "block";
+    }
+    </script>
+
+    <script>
+    function playSong(id) {
+
+        // Pause all songs first
+        const allSongs = document.querySelectorAll("audio");
+        allSongs.forEach(song => {
+            song.pause();
+            song.currentTime = 0;
+        });
+
+        // Play selected song
+        const selected = document.getElementById(id);
+        selected.play();
+    }
+    </script>
+
